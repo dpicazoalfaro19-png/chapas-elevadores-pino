@@ -53,6 +53,14 @@
     display:flex;align-items:center;justify-content:space-between;
   }
   .brand{display:flex;flex-direction:column;line-height:1;}
+  .brand-row{display:flex;align-items:center;gap:16px;}
+  .home-btn{
+    display:flex;align-items:center;gap:8px;color:var(--safety-yellow);
+  }
+  .home-btn .home-line{width:20px;height:1px;background:var(--steel-light);}
+  .home-btn svg{width:20px;height:20px;flex-shrink:0;}
+  .home-btn:hover .home-line{background:var(--safety-yellow);}
+  .home-btn:hover svg{color:#ffcb2e;}
   .brand .name{font-family:'Archivo Black',sans-serif;font-size:1.05rem;}
   .brand .tag{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--safety-yellow);letter-spacing:0.08em;margin-top:3px;}
   .nav-cta{
@@ -108,6 +116,10 @@
   .btn-ghost:hover{border-color:var(--safety-yellow);}
   .btn-fill{background:var(--safety-yellow);color:#1c1503;border-color:var(--safety-yellow);}
   .btn-fill:hover{background:#ffcb2e;border-color:#ffcb2e;}
+  .btn-blue{background:#5fc0e0;color:#052733;border-color:#5fc0e0;}
+  .btn-blue:hover{background:#7fd0ec;border-color:#7fd0ec;}
+  .btn-green{background:var(--ok-green);color:#0c1f13;border-color:var(--ok-green);}
+  .btn-green:hover{background:#3fe07e;border-color:#3fe07e;}
 
   .hero-plate{
     margin-top:56px;
@@ -201,13 +213,20 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
 <header>
   <div class="nav-wrap">
-    <div class="brand">
-      <span class="name">CHAPAS Y ELEVADORES PINO</span>
-      <span class="tag">TALLER &amp; SERVICIO A DOMICILIO — MTY</span>
+    <div class="brand-row">
+      <div class="brand">
+        <span class="name">CHAPAS Y ELEVADORES PINO</span>
+        <span class="tag">TALLER &amp; SERVICIO A DOMICILIO — MTY</span>
+      </div>
+      <a href="#top" class="home-btn" aria-label="Volver arriba">
+        <span class="home-line"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9.5a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-9"/></svg>
+        <span class="home-line"></span>
+      </a>
     </div>
   </div>
 </header>
@@ -222,6 +241,8 @@
     <div class="hero-actions">
       <a class="btn btn-fill" href="#horario">Ver horarios</a>
       <a class="btn btn-fill" href="#servicios">Ver servicios</a>
+      <a class="btn btn-fill" href="#zona">Ubicación</a>
+      <a class="btn btn-fill" href="#contacto">Contáctanos</a>
     </div>
 
     <div class="hero-plate">
@@ -293,7 +314,7 @@
         <li><span>Domicilio</span><span>Costo adicional según zona</span></li>
       </ul>
       <div style="margin-top:24px;">
-        <a class="btn btn-primary" href="https://www.google.com/maps/place/Chapas+y+Elevadores+Pino/@25.6689215,-100.2416668,17z/data=!4m8!3m7!1s0x8662c17b9bbf38cd:0x5eca707a23416471!8m2!3d25.6689167!4d-100.2390919!9m1!1b1!16s%2Fg%2F11z6sxytrm" target="_blank" rel="noopener">Ver en Google Maps →</a>
+        <a class="btn btn-blue" href="https://www.google.com/maps/place/Chapas+y+Elevadores+Pino/@25.6689215,-100.2416668,17z/data=!4m8!3m7!1s0x8662c17b9bbf38cd:0x5eca707a23416471!8m2!3d25.6689167!4d-100.2390919!9m1!1b1!16s%2Fg%2F11z6sxytrm" target="_blank" rel="noopener">Ver en Google Maps →</a>
       </div>
     </div>
     <div class="map-frame">
@@ -319,13 +340,13 @@
   </div>
 </section>
 
-<footer class="corrugated">
+<footer class="corrugated" id="contacto">
   <span class="eyebrow" style="justify-content:center;">¿SE LE TRABÓ LA CHAPA O EL ELEVADOR?</span>
   <h2>Mándanos foto o video por WhatsApp y te decimos qué tiene.</h2>
   <p>Respuesta directa, sin intermediarios. Atendemos Guadalupe, Juárez y área metropolitana de Monterrey.</p>
   <div class="footer-actions">
-    <a class="btn btn-primary" href="https://wa.me/5218112094960?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20necesito%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp: 81 1209 4960</a>
-    <a class="btn btn-ghost" href="tel:+5218112094960">Llamar</a>
+    <a class="btn btn-primary" href="https://wa.me/5218112094960?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20necesito%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-green" href="tel:+5218112094960">Llamar</a>
   </div>
   <div class="socials">
     <a href="https://www.facebook.com/ChapasYElevadoresPino" target="_blank" rel="noopener">Facebook ↗</a>
