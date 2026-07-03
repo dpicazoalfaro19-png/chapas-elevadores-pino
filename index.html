@@ -61,6 +61,16 @@
   .home-btn svg{width:20px;height:20px;flex-shrink:0;}
   .home-btn:hover .home-line{background:var(--safety-yellow);}
   .home-btn:hover svg{color:#ffcb2e;}
+  .nav-links{display:flex;align-items:center;gap:14px;}
+  .nav-links a{
+    color:var(--safety-yellow);font-size:0.82rem;font-weight:600;
+    letter-spacing:0.02em;white-space:nowrap;
+  }
+  .nav-links a:hover{color:#ffcb2e;}
+  .nav-sep{width:1px;height:16px;background:var(--steel-light);display:inline-block;}
+  @media (max-width:860px){
+    .nav-links{display:none;}
+  }
   .brand .name{font-family:'Archivo Black',sans-serif;font-size:1.05rem;}
   .brand .tag{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--safety-yellow);letter-spacing:0.08em;margin-top:3px;}
   .nav-cta{
@@ -72,7 +82,7 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative;
-    padding:70px 20px 90px;
+    padding:50px 20px 60px;
     overflow:hidden;
   }
   .hero::before{
@@ -122,7 +132,7 @@
   .btn-green:hover{background:#3fe07e;border-color:#3fe07e;}
 
   .hero-plate{
-    margin-top:56px;
+    margin-top:32px;
     border:1px solid var(--steel-light);
     background:var(--steel);
     border-radius:8px;
@@ -228,6 +238,15 @@
         <span class="home-line"></span>
       </a>
     </div>
+    <nav class="nav-links">
+      <a href="#horario">Ver horarios</a>
+      <span class="nav-sep"></span>
+      <a href="#servicios">Ver servicios</a>
+      <span class="nav-sep"></span>
+      <a href="#zona">Ubicación</a>
+      <span class="nav-sep"></span>
+      <a href="#contacto">Contáctanos</a>
+    </nav>
   </div>
 </header>
 
@@ -238,12 +257,7 @@
     <h1>Chapas y elevadores que <span>vuelven a funcionar</span> hoy mismo.</h1>
     <p class="lead">Servicio de chapas y elevadores manuales y eléctricos para autos, en Guadalupe, Juárez y toda el área metropolitana de Monterrey. Diagnóstico directo, sin vueltas.</p>
 
-    <div class="hero-actions">
-      <a class="btn btn-fill" href="#horario">Ver horarios</a>
-      <a class="btn btn-fill" href="#servicios">Ver servicios</a>
-      <a class="btn btn-fill" href="#zona">Ubicación</a>
-      <a class="btn btn-fill" href="#contacto">Contáctanos</a>
-    </div>
+
 
     <div class="hero-plate">
       <div>
